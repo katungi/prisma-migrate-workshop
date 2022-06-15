@@ -31,4 +31,6 @@ jobs:
         with:
           node-version: '14.x'
       - run: npm install
+      - run: npm run build
       # TODO: Add step to apply migration on test database
+      - run: npx prisma migrate deploy
